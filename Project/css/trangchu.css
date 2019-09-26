@@ -1,61 +1,64 @@
-body{
-  margin:0px auto;
+.Home_page
+{
+  position: relative;
+  overflow: hidden;
 }
-.home .head{
+.Home_page .head{
     background-color: #024282;
-    height:2.5rem;
+    
   
   }
-  .home .head .hotline{
+  .Home_page .head .hotline{
     color: #fdb913;
   }
-.hotline a{
+.Hotline a{
     color: #fdb913;
 }
-  .home .wrapper{
+.Home_page .wrapper{
     padding-left: 8%;
     padding-right: 8%;
-  }
-  .home .head .wrapper{
+}
+
+  .Home_page .head .wrapper{
     
     font-size: 13px;
   }
-  .home .head .wrapper div{
+  .Home_page .head .wrapper div{
     display: flex;
     align-items: center;
   }
-  .home .head .wrapper a{
+  .Home_page .head .wrapper a{
     padding: 0;
     color: white;
   }
-  .home .head .wrapper .input input{
+  .Home_page .head .wrapper .input input{
     height: 35px;
     background-color: #012b64;
     border:none;
     padding-left: 20px;
     font-size: 16px;
   }
-  .home .head .wrapper .input img{
+  .Home_page .head .wrapper .input img{
     height: 16px;
     margin-left: 10px;
   }
-  .home .head .wrapper .input i{
+  .Home_page .head .wrapper .input i{
     color: white;
     padding-right: 20px;
   }
-  .home .head .wrapper .input form {
+  .Home_page .head .wrapper .input form {
     background-color: #012b64;
   }
   
-  .home .menu .navbar{
+  .Home_page .menu .navbar{
     padding: 0;
     background-color: unset;
   }
-  .home .menu .navbar .navbar-nav{
+  .Home_page .menu .navbar .navbar-nav{
     width: 100%;
     padding-left: 10px;
   }
-  .home .menu .navbar .navbar-nav li{
+  .Home_page .menu .navbar .navbar-nav li{
     padding: 0;
     margin: 0;
     display: flex;
@@ -63,29 +66,31 @@ body{
     font-size: 18px;
     padding-left: 6px;
   }
-  .home .menu .navbar .navbar-nav li:hover i,.home .menu .navbar .navbar-nav li:hover a{
+  .Home_page .menu .navbar .navbar-nav li:hover i,.Home_page .menu .navbar .navbar-nav li:hover a{
     color: #aa914d;
   }
-  .home .menu .navbar .navbar-nav li i{
+  .Home_page .menu .navbar .navbar-nav li i{
     color: #35699b;
     margin-right: 5px;
     font-size: 22px;
   }
-  .home .menu .navbar .navbar-nav li a{
+  .Home_page .menu .navbar .navbar-nav li a{
     color: black;
     margin: 0;
     padding: 0;
   }
-  .home .slide .slide-wrapper .triangle-wrapper{
+  .Home_page .slide .slide-wrapper .triangle-wrapper{
     display: flex;
       position: absolute;
       justify-content: center;
-      z-index: 2;
+      z-index: 3;
       width: 100%;
   
       
   }
-  .home .slide .slide-wrapper .triangle-wrapper .triangle{
+  
+  
+  .Home_page .slide .slide-wrapper .triangle-wrapper .triangle{
       width: 0;
       height: 0;
       border-left: 50px solid transparent;
@@ -94,32 +99,32 @@ body{
       display: flex;
       justify-content: center;
   }
-  .home .slide .slide-wrapper .triangle-wrapper .triangle i{
+  .Home_page .slide .slide-wrapper .triangle-wrapper .triangle i{
     position: absolute;
     top: 0;
     font-size: 25px;
   }
-  .home .slide .carousel-inner{
+  .Home_page .slide .carousel-inner{
     position: relative;
   }
-  .home .slide .line-slide{
+  .Home_page .slide .line-slide{
     bottom: 0;
     position: absolute;
     background: rgba(0,0,0,0.45);
     width: 100%;
     padding: 30px 20px;
   }
-  .home .slide .line-slide h3{
+  .Home_page .slide .line-slide h3{
     color: white;
     z-index: 2;
   }
-  .home .slide .line-slide .control-button{
+  .Home_page .slide .line-slide .control-button{
       position: relative;
       width: 100%;
       display: flex;
       justify-content: flex-end;
   }
-  .home .slide .line-slide .control-button .right{
+  .Home_page .slide .line-slide .control-button .right{
     width: 20%;
     position: absolute;
   }
@@ -127,7 +132,7 @@ body{
      flex: 0 0 25%;
 
  }
- .home .sl2{
+ .Home_page .sl2{
      background-color: #024282;
      height: 15rem;
      margin-top:5rem;
