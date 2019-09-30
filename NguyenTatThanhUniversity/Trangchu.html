@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta charset="UTF-8">
       <title>Trường Đại Học Nguyễn Tất Thành </title>
+      <link rel="shortcut icon" href="http://ntt.edu.vn/web/favicon.ico">
       <link rel="stylesheet"  href="bootstrap/css/bootstrap.min.css">
 
       <link rel="stylesheet" href="css/trangchu.css">
@@ -12,35 +13,36 @@
     <script src="bootstrap/js/bootstrap.js"></script>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      
+      <script type="text/javascript" src="js/slick.min.js"></script>
       <script src="js/trangchu.js"></script>
-    </head>
-    <body>
-        <div class="Home_page">
-          <div class="head">
-            <div class="wrapper row top">
-              <div class="col-md-3 hotline">
+ </head>
+ <body>
+<div class="Home_page">
+   <div class="head">
+     <div class="wrapper row top">
+       
+         <div class="col-md-3 hotline">
                 HOTLINE: <span id="hotline-1">0902.298.300 - 0906.298.300</span>
                 
-              </div>
-              <div class="col-md-5 ">
-                <a class="col" href="">SINH VIÊN</a>
+          </div>
+          <div class="col-md-5 ">
+                <a class="col" href="sinhvien.html">SINH VIÊN</a>
                 <a class="col" href="">GIẢNG VIÊN</a>
                 <a class="col" href="">ĐÀO TẠO QUỐC TẾ</a>
-              </div>
-              <div class="col-md-4 input d-flex justify-content-end">
+           </div>
+          
+           <div class="col-md-4 input d-flex justify-content-end">
                 <form>
                   <input type="text" name="" placeholder="Tìm kiếm thông tin ">
                   <i class="fa fa-search" aria-hidden="true"></i>
                 </form>
                 
                 <img src="http://ntt.edu.vn/web/frontend/images/ico-flagen.jpg">
-              </div>
-            </div>
           </div>
+      </div>
+   </div>
           
-            
-        <div class="menu">
+   <div class="menu">
                 <div class="wrapper">
                   <nav class="navbar navbar-expand-lg">
                       <div class="logo">
@@ -76,15 +78,15 @@
                   </nav>
                 </div>
                 
-        </div>
+   </div>
           
-              <div class="slide">
+   <div class="slide">
                 
                 <div class="wrapper slide-wrapper">
                   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="triangle-wrapper">
                       <div class="triangle">
-                        <i class="fa fa-bars c-blue-a5"></i>
+                        <i id="showCollapse" class="fa fa-bars c-blue-a5"></i>
                       </div>
                       
                     </div>
@@ -99,7 +101,160 @@
                         <img class="d-block w-100" src="img/a3.jpg" alt=" slide3">
                       </div>
                     </div>
-                    
+                    <div class="collapse-handmade" id="collapse-handmade">
+                      <div class="row">
+                        <div class="col-md-9 row">
+                          <div class="col-md-4 item">
+                          
+                            <ul>
+                              <li><h5><a href="">Giới thiệu chung </a></h5></li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a> 	
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a> 	
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a> 	
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a> 	
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a> 	
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 item">
+                            
+                            <ul>
+                              <li><h5><a href="">Tuyển sinh</a>  </h5></li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>	
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>	
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>	
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 item">
+                            
+                            <ul>
+                              <li><h5><a href="">Đào tạo</a>  </h5></li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>	
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>	
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a> 	
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 item">
+                          
+                            <ul>
+                              <li><h5><a href="">Đào tạo</a>  </h5></li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>	
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>	
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a> 	
+                              </li>
+                            </ul>
+                          </div>
+      
+                          <div class="col-md-4 item">
+                            
+                            <ul>
+                              <li><h5><a href="">Đào tạo</a>  </h5></li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>	
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a>	
+                              </li>
+                              <li>
+                                <i class="fa fa-angle-double-right"></i>
+                                <a href="">giới thiệu chung </a> 	
+                              </li>
+                            </ul>
+      
+                          </div>
+                        </div>
+                        
+                        <div class="col-md-3 sociaty">
+                          <ul>
+                            <li><a href=""><i class="fab fa-facebook-square"></i>Facebook</a></li>
+                            <li><a href=""><i class="fab fa-google-plus-g"></i>Google Plus</a></li>
+                            <li><a href=""><i class="fab fa-youtube"></i>Youtube</a></li>
+                            <li><a href=""><i class="fas fa-envelope"></i>E-mail</a></li>
+                            <li><a href=""><i class="fab fa-youtube"></i>Youtube</a></li>
+                            <li><a href=""><i class="fa fa-wechat"></i>Zalo</a></li>
+                            <li><a href=""><i class="fa fa-mortar-board"></i>E-office</a></li>
+                            <li><a href=""><i class="fa fa-users"></i>Tuyển dụng</a></li>
+                          </ul>
+                        </div>
+      
+                        
+      
+                      </div>
+                    </div>
         
                       <div class="line-slide">
                       <h3>Chính sách học bổng của trường đại học Nguyễn Tất Thành</h3>
@@ -121,13 +276,13 @@
                   </div>
                     
                   </div>
-              </div>
+   </div>
                   <!-- end slide -->
-                 <div class="main">
-                    <div class="container">
+  <div class="main">
+     <div class="container">
                   <div class="row">
                       <div class="col-md-8">
-                          <h2 class="heading-2" style="color: black;font-size:18px; font-family:Arial, Helvetica, sans-serif">
+                          <h2 class="heading-2" style="color: black;font-size:18px; font-family:Arial, Helvetica, sans-serif"> ::before
                            
                             <a href="http://ntt.edu.vn/web/tin-tuc/" style="color: black">Tin tức</a>
                             
@@ -175,87 +330,74 @@
                       </div>
                     
                   </div>
-                  <div class="section sub-slider">
-                    <h3 class="title-carousel"><b>
-                                            TẠI SAO CHỌN ĐẠI HỌC NGUYỄN TẤT THÀNH?
-                    </b></h3>
-                    <div class="bx-wrapper" ><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 300px;"><div class="multi-slide" style="width: 715%; position: relative; transition-duration: 0s; transform: translate3d(-1200px, 0px, 0px);">
-                      <div class="slide d-flex justify-content-center bx-clone" style="background-image: url(&quot;/web/upload/images/hp_nhatruong-01.svg&quot;); float: left; list-style: outside none none; position: relative; width: 400px;">
-                        <div class="caption text-center">
-                            <p class="highlight"><a href="/web/thong-tin/dai-hoc-hanh-phuc" style="text-decoration: none; color: inherit">Đại học hạnh phúc</a></p>
-                            <p class="line">Đại học Nguyễn Tất Thành là ngôi trường tri thức và hạnh phúc dành cho sinh viên với 5 giá trị nổi bật</p>
+                  <div class="reason">
+                      <div class="wrapper ">
+                        <div class="wrapper-reason">
+                          <div class="title">
+                            <b>TẠI SAO CHỌN ĐẠI HỌC NGUYỄN TẤT THÀNH?</b>
+                            <div class="d-flex justify-content-center">
+                              <div class="ngang">
+                              
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="content">
+                            <div class="carousel_wrapper_track">
+                              <section class="center slider">
+                                  <div class="item">
+                                    <img src="http://ntt.edu.vn/web/upload/images/hp_nguoithay-01.svg">
+                                    <div class="main">
+                                      <h5>Chuẩn 3 sao QS-Starts</h5>
+                                      <p>Xếp hạng quốc tế 3 sao theo chuẩn QS-Stars, một trong các chuẩn xếp hạng hàng đầu dành cho các trường đại học trên thế giới.ếp hạng quốc tế 3 sao theo chuẩn QS-Stars, một trong các chuẩn xếp hạng hàng đầu dành cho các trường đại học trên thế giới.ếp hạng quốc tế 3 sao theo chuẩn QS-Stars, một trong các chuẩn xếp hạng hàng đầu dành cho các trường đại học trên thế giới.	</p>
+                                    </div>
+                                    
+                                  </div>
+                                  <div class="item">
+                                    <img src="http://ntt.edu.vn/web/upload/images/hp_xhoi-01.svg">
+                                    <div class="main">
+                                      <h5>Đạt chuẩn chất lượng quốc gia</h5>
+                                      <p>Xếp hạng quốc tế 3 sao theo chuẩn QS-Stars, một trong các chuẩn
+                                         xếp hạng hàng đầu dành cho các trường đại học trên thế giới.</p>
+                                    </div>
+                                    
+                                  </div>
+              
+                                  <div class="item">
+                                    <img src="http://ntt.edu.vn/web/upload/images/hp_nhatruong-01.svg">
+                                    <div class="main">
+                                      <h5>Đại học hạnh phúc</h5>
+                                      <p>Xếp hạng quốc tế 3 sao theo chuẩn QS-Stars, một trong các chuẩn xếp hạng hàng đầu dành cho các trường đại học trên thế giới.</p>
+                                    </div>
+                                    
+                                  </div>
+              
+                                  <div class="item">
+                                    <img src="http://ntt.edu.vn/web/upload/images/hp_sinhvien-01.svg">
+                                    <div class="main">
+                                      <h5>Top 10 thương hiệu nổi tiếng</h5>
+                                      <p>Xếp hạng quốc tế 3 sao theo chuẩn QS-Stars, một trong các chuẩn xếp hạng hàng đầu dành cho các trường đại học trên thế giới.</p>
+                                    </div>
+                                    
+                                  </div>
+              
+                                  <div class="item">
+                                    <img src="http://ntt.edu.vn/web/upload/images/hp_doanhnghiep-01.svg">
+                                    <div class="main">
+                                      <h5>95% sinh viên tốt nghiệp có việc làm</h5>
+                                      <p>Xếp hạng quốc tế 3 sao theo chuẩn QS-Stars, một trong các chuẩn xếp hạng hàng đầu dành cho các trường đại học trên thế giới.</p>
+                                    </div>
+                                    
+                                  </div>
+                                
+                                </section>
+                              
+                            </div>
+                          </div>
                         </div>
-                    </div><div class="slide d-flex justify-content-center bx-clone" style="background-image: url(&quot;/web/upload/images/hp_sinhvien-01.svg&quot;); float: left; list-style: outside none none; position: relative; width: 400px;">
-                        <div class="caption text-center">
-                            <p class="highlight"><a href="" style="text-decoration: none; color: inherit">Top 10 thương hiệu nổi tiếng</a></p>
-                            <p class="line">Trong những năm qua, Trường ĐH Nguyễn Tất Thành đã không ngừng đổi mới công tác quản trị đại học, nâng cao chất lượng đào tạo, nghiên cứu khoa học, công tác hợp tác quốc tế, công tác sinh viên.</p>
-                        </div>
-                    </div><div class="slide d-flex justify-content-center bx-clone" style="background-image: url(&quot;/web/upload/images/hp_doanhnghiep-01.svg&quot;); float: left; list-style: outside none none; position: relative; width: 400px;">
-                        <div class="caption text-center">
-                            <p class="highlight"><a href="" style="text-decoration: none; color: inherit">95% sinh viên tốt nghiệp có việc làm</a></p>
-                            <p class="line">Định vị là trường ứng dụng và thực hành hướng tới mục tiêu đáp ứng nhu cầu giáo dục đại học đại chúng, trí thức hóa nguồn nhân lực, tạo môi trường học tập tích cực và trải nghiệm thực tiễn cho sinh viên.</p>
-                        </div>
+                        
+                      </div>
                     </div>
-                                                                        <div class="slide d-flex justify-content-center" style="background-image: url(&quot;/web/upload/images/hp_nguoithay-01.svg&quot;); float: left; list-style: outside none none; position: relative; width: 400px;">
-                        <div class="caption text-center">
-                            <p class="highlight"><a href="img/sao.svg" style="text-decoration: none; color: inherit">Chuẩn 3 sao QS-Stars (Anh Quốc)</a></p>
-                            <p class="line">Xếp hạng quốc tế 3 sao theo chuẩn QS-Stars, một trong các chuẩn xếp hạng hàng đầu dành cho các trường đại học trên thế giới.</p>
-                        </div>
-                    </div>
-                                                <div class="slide d-flex justify-content-center" style="background-image: url(&quot;/web/upload/images/hp_xhoi-01.svg&quot;); float: left; list-style: outside none none; position: relative; width: 400px;">
-                        <div class="caption text-center">
-                            <p class="highlight"><a href="" style="text-decoration: none; color: inherit">Đạt chuẩn chất lượng quốc gia</a></p>
-                            <p class="line">Là trường đại học ngoài công lập đầu tiên tại TP.HCM được kiểm định đạt chất lượng theo bộ tiêu chí quốc gia do Bộ GD&amp;ĐT ban hành.</p>
-                        </div>
-                    </div>
-                                                <div class="slide d-flex justify-content-center" style="background-image: url(&quot;/web/upload/images/hp_nhatruong-01.svg&quot;); float: left; list-style: outside none none; position: relative; width: 400px;">
-                        <div class="caption text-center">
-                            <p class="highlight"><a href="" style="text-decoration: none; color: inherit">Đại học hạnh phúc</a></p>
-                            <p class="line">Đại học Nguyễn Tất Thành là ngôi trường tri thức và hạnh phúc dành cho sinh viên với 5 giá trị nổi bật</p>
-                        </div>
-                    </div>
-                                                <div class="slide d-flex justify-content-center" style="background-image: url(&quot;/web/upload/images/hp_sinhvien-01.svg&quot;); float: left; list-style: outside none none; position: relative; width: 400px;">
-                        <div class="caption text-center">
-                            <p class="highlight"><a href="" style="text-decoration: none; color: inherit">Top 10 thương hiệu nổi tiếng</a></p>
-                            <p class="line">Trong những năm qua, Trường ĐH Nguyễn Tất Thành đã không ngừng đổi mới công tác quản trị đại học, nâng cao chất lượng đào tạo, nghiên cứu khoa học, công tác hợp tác quốc tế, công tác sinh viên.</p>
-                        </div>
-                    </div>
-                                                <div class="slide d-flex justify-content-center" style="background-image: url(&quot;/web/upload/images/hp_doanhnghiep-01.svg&quot;); float: left; list-style: outside none none; position: relative; width: 400px;">
-                        <div class="caption text-center">
-                            <p class="highlight"><a href="" style="text-decoration: none; color: inherit">95% sinh viên tốt nghiệp có việc làm</a></p>
-                            <p class="line">Định vị là trường ứng dụng và thực hành hướng tới mục tiêu đáp ứng nhu cầu giáo dục đại học đại chúng, trí thức hóa nguồn nhân lực, tạo môi trường học tập tích cực và trải nghiệm thực tiễn cho sinh viên.</p>
-                        </div>
-                    </div>
-                                                            <div class="slide d-flex justify-content-center bx-clone" style="background-image: url(&quot;/web/upload/images/hp_nguoithay-01.svg&quot;); float: left; list-style: outside none none; position: relative; width: 400px;">
-                        <div class="caption text-center">
-                            <p class="highlight"><a href="/web/thong-tin/chuan-3-sao-qs-stars-anh-quoc" style="text-decoration: none; color: inherit">Chuẩn 3 sao QS-Stars (Anh Quốc)</a></p>
-                            <p class="line">Xếp hạng quốc tế 3 sao theo chuẩn QS-Stars, một trong các chuẩn xếp hạng hàng đầu dành cho các trường đại học trên thế giới.</p>
-                        </div>
-                    </div><div class="slide d-flex justify-content-center bx-clone" style="background-image: url(&quot;/web/upload/images/hp_xhoi-01.svg&quot;); float: left; list-style: outside none none; position: relative; width: 400px;">
-                        <div class="caption text-center">
-                            <p class="highlight"><a href="/web/thong-tin/dat-chuan-chat-luong-quoc-gia" style="text-decoration: none; color: inherit">Đạt chuẩn chất lượng quốc gia</a></p>
-                            <p class="line">Là trường đại học ngoài công lập đầu tiên tại TP.HCM được kiểm định đạt chất lượng theo bộ tiêu chí quốc gia do Bộ GD&amp;ĐT ban hành.</p>
-                        </div>
-                    </div><div class="slide d-flex justify-content-center bx-clone" style="background-image: url(&quot;/web/upload/images/hp_nhatruong-01.svg&quot;); float: left; list-style: outside none none; position: relative; width: 400px;">
-                        <div class="caption text-center">
-                            <p class="highlight"><a href="/web/thong-tin/dai-hoc-hanh-phuc" style="text-decoration: none; color: inherit">Đại học hạnh phúc</a></p>
-                            <p class="line">Đại học Nguyễn Tất Thành là ngôi trường tri thức và hạnh phúc dành cho sinh viên với 5 giá trị nổi bật</p>
-                        </div>
-                    </div></div>
-                <!-- </div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev" href=""><i class="fa fa-angle-left" aria-hidden="true"></i></a><a class="bx-next" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a></div></div></div>
-                 --></div>
-                
-                      
-                      
-                </div>
-                
-      
-                
-
-        
-                  
-                   
-              </div>
               <hr>
               <div class="section d-md-flex boder-top pt-4">
                 <div class="col-lg-8">
@@ -268,7 +410,7 @@
                         <img src="img/pic1.jpg" alt="">
                       </a>
                       <a href="" class="title">
-                        Khoa Công nghệ sinh học ĐH Nguyễn Tất Thành làm việc với ĐH Hỉoshima
+                        Khoa Công nghệ sinh học ĐH Nguyễn Tất Thành làm việc với ĐH Hiroshima
                       </a>
                       <div class="content">
                         <p>NTTU - Sáng ngày 17/09/2019, khoa Công nghệ Sinh học Trường ĐH Nguyễn Tất Thành đã có buổi làm việc với ĐH Hiroshima (Nhật Bản)</p>
@@ -305,95 +447,146 @@
                   <h2 class="heading-2">
                     <a href="#">Sự kiện nổi bật</a></h2>
                              <ul class="list-unstyled">
-                                  <li class="media event">
-                                  <div class="d-flex align-items-center mr-3 thumb c-white">
-                                      <span class="inner text-center w-100">
-                                          Sep<br>
-                                          <b>25</b>
-                                      </span>
+                               <li class="media event">
+                                 <div class="item-left align-items-center d-flex" >
+                                   <span class="inner text-center w-100">
+                                     Sep<br> <b>25</b>
+                                   </span>
+                                 </div>
+                                 <div class="media-body">
+                                    <h4 class="title" style="font-size: 16px"><a href="#">Đại hội đại biểu Đoàn TNCS Hồ CHí Minh - 
+                                      Trường ĐH Nguyễn Tất Thành lần VII, nhiệm kỳ 2019 - 2022 </a></h4>
+                                      <ul class="breadcrum">
+                                        <li class="breadcrumb-item time">
+                                          <i class="fa1 fa-clock-o">
+                                            7:30
+                                          </i>
+                                        </li>
+                                      
+                                        <li class="breadcrum-item">Hội trường A.801, 300A Nguyễn Tất Thành, phường 13, quận 4, TP. HCM</li>
+                                      </ul>
+                                 </div>
+                               </li>
+                               <li class="media event">
+                                  <div class="item-left align-items-center d-flex" >
+                                    <span class="inner text-center w-100">
+                                      Sep<br> <b>25</b>
+                                    </span>
                                   </div>
                                   <div class="media-body">
-                                      <h5 class="title mt-0"><a href="#">Đại hội đại biểu Đoàn TNCS Hồ CHí Minh - Trường ĐH Nguyễn Tất Thành lần VII, nhiệm kỳ 2019 - 2022</a></h5>
-                                      <ul class="breadcrumb mb-0 bgm-white">
-                                          <li class="breadcrumb-item col-xs-auto time">
-                                              <i class="fa fa-clock-o mr-2" aria-hidden="true"></i>07:30
-                                          </li>
-                                          <li class="breadcrumb-item col-xs-auto">Hội trường A.801, 300A Nguyễn Tất Thành, phường 13, quận 4, TP. HCM</li>
-                                      </ul>
+                                     <h4 class="title" style="font-size: 16px"><a href="#">Đại hội đại biểu Đoàn TNCS Hồ CHí Minh - 
+                                       Trường ĐH Nguyễn Tất Thành lần VII, nhiệm kỳ 2019 - 2022 </a></h4>
+                                       <ul class="breadcrum">
+                                         <li class="breadcrumb-item time">
+                                           <i class="fa1 fa-clock-o">
+                                             7:30
+                                           </i>
+                                         </li>
+                                       
+                                         <li class="breadcrum-item">Hội trường A.801, 300A Nguyễn Tất Thành, phường 13, quận 4, TP. HCM</li>
+                                       </ul>
                                   </div>
-                              </li>
-                                                              <li class="media event">
-                                  <div class="d-flex align-items-center mr-3 thumb c-white">
+                                </li>
+                                <li class="media event">
+                                    <div class="item-left align-items-center d-flex" >
                                       <span class="inner text-center w-100">
-                                          Sep<br>
-                                          <b>22</b>
+                                        Sep<br> <b>25</b>
                                       </span>
-                                  </div>
-                                  <div class="media-body">
-                                      <h5 class="title mt-0"><a href="#">Chuyên đề tốt nghiệp lớp Việt Nam học - Khoa Du lịch và Việt Nam học</a></h5>
-                                      <ul class="breadcrumb mb-0 bgm-white">
-                                          <li class="breadcrumb-item col-xs-auto time">
-                                              <i class="fa fa-clock-o mr-2" aria-hidden="true"></i>07:00
-                                          </li>
-                                          <li class="breadcrumb-item col-xs-auto">Sân bóng - cơ sở quận 7, 458/3F Nguyễn Hữu Thọ, phường Tân Hưng, quận 7</li>
-                                      </ul>
-                                  </div>
-                              </li>
-                                                              <li class="media event">
-                                  <div class="d-flex align-items-center mr-3 thumb c-white">
-                                      <span class="inner text-center w-100">
-                                          Sep<br>
-                                          <b>19</b>
-                                      </span>
-                                  </div>
-                                  <div class="media-body">
-                                      <h5 class="title mt-0"><a href="#">Workshop, Chủ đề: "Youtube đã thay đổi cuộc sống của tôi như thế nào''</a></h5>
-                                      <ul class="breadcrumb mb-0 bgm-white">
-                                          <li class="breadcrumb-item col-xs-auto time">
-                                              <i class="fa fa-clock-o mr-2" aria-hidden="true"></i>07:30
-                                          </li>
-                                          <li class="breadcrumb-item col-xs-auto">Hội trường L.HT1, 331 QL1A, phường An Phú Đông, quận 12</li>
-                                      </ul>
-                                  </div>
-                              </li>
-                                                      </ul>
+                                    </div>
+                                    <div class="media-body">
+                                       <h4 class="title" style="font-size: 16px"><a href="#">Đại hội đại biểu Đoàn TNCS Hồ CHí Minh - 
+                                         Trường ĐH Nguyễn Tất Thành lần VII, nhiệm kỳ 2019 - 2022 </a></h4>
+                                         <ul class="breadcrum">
+                                           <li class="breadcrumb-item time">
+                                             <i class="fa1 fa-clock-o">
+                                               7:30
+                                             </i>
+                                           </li>
+                                         
+                                           <li class="breadcrum-item">Hội trường A.801, 300A Nguyễn Tất Thành, phường 13, quận 4, TP. HCM</li>
+                                         </ul>
+                                    </div>
+                                  </li>
+                             </ul>
                       <ul class="list-unstyled">
-                          <li><a class="c-blue-a5 font-weight-bold" href="#"><i class="fa fa-chevron-circle-right mr-2 c-blue-a5"></i>Xem thêm</a></li>
+                          <li>
+                            <a class="c-blue-a5 font-weight-bold" href="#">
+                              <i class="fa fa-chevron-circle-right mr-2 c-blue-a5"></i>Xem thêm</a>
+                            </li>
                         </ul>
-                                        </div>
-            
-
-
-              </div>
-
-
-
-
-
-
-        <!--</div>
-      </div>-->
-             
+                  </div>
+              </div>        
         </div>    
+  </div>
         
-    
-                
-            
-          
-              <!-- end slide -->
-    
-              
-            
-   
+  <footer>
+    <div class="container">
+      <div class="row">
+         <div class="col-lg-3 col-sm-6">
+            <p ><a href="#"><b>ĐẠI HỌC NGUYỄN TẤT THÀNH</b></a></p>
+            <ul class="fsub">
+              <li><a href="#">Thư ngỏ</a></li>
+              <li><a href="#">Tầm nhìn - Sứ mạng</a></li>
+              <li><a href="">Văn hóa ĐH Nguyễn Tất Thành</a></li>
+              <li><a href="">Thông tin 3 công khai</a></li>
+              <li><a href="">Đảm bảo chất lượng</a></li>
+              <li><a href="">Phát triển bền vững</a></li>
+              <li><a href="">Trường Trung cấp Nguyễn Tất Thành</a></li>
+              <li><a href="">Trường Tiểu học Anh Việt Mỹ</a></li>
+            </ul>
+         </div>
+         <div class="col-lg-3 col-sm-6">
+          <p ><a href="#"><b>PHÒNG-BAN</b></a></p>
+          <p ><a href="#"><b>THƯ VIỆN ẢNH</b></a></p>
+          <p ><a href="#"><b>E-LEARNING</b></a></p>
+         </div>
+         <div class="col-lg-3 col-sm-6">
+          <p ><a href="#"><b>TRUNG TÂM-VIỆN</b></a></p>
+          <ul class="fsub">
+            <li><a href="">Viện Đào Tạo Quốc Tế</a></li>
+            <li><a href="">Viện Công Nghệ Cao</a></li>
+            <li><a href="">Viện Đào tạo Sau đại học</a></li>
+            <li><a href="">Trung tâm Thông tin Thư viện</a></li>
+            <li><a href="">TT Ngoại Ngữ</a></li>
+            <li><a href="">TT Tin Học NTT</a></li>
+            <li><a href="">TT QH Doanh Nghiệp &amp; Khởi nghiệp</a></li>
+            <li><a href="">TT Đào tạo theo nhu cầu XH</a></li>
+            <li><a href="">TT Xuất khẩu lao động Texgamex</a></li>
+            <li><a href="">Công đoàn Trường ĐH Nguyễn Tất Thành</a></li>
+          </ul>
+         </div>
+         <div class="col-lg-3 col-sm-6" style="padding-left: 40px; padding-right: 40px ; padding-top: 30px">
+          <ul class="sub-page">
+            <li><a href="" class="btn"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+            <li><a href="" class="btn"><i class="fab fa-google-plus"></i> Google Plus</a></li>
+            <li><a href="" class="btn"><i class="fab fa-youtube"></i> Youtube</a></li>
+            <li><a href="#" class="btn"><i class="fas fa-comments"></i> Email</a></li>
+            <li><a href="#" class="btn"><i class="fas fa-comments"></i> Zalo</a></li>
+            <li><a href="" class="btn"><i class="fas fa-graduation-cap"></i> Egov</a></li>
+            <li><a href="" class="btn"><i class="fa fa-users"></i>Tuyển dụng</a></li>
+          </ul>
+        </div>
+      </div>
+     </div>
+     <div class="copyright">
+      <div class="container">
+        <div class="row pb-2">
+          <div class="col-md-7">
+            <p  class="pb-0">
+              <b>THÔNG TIN LIÊN HỆ </b><br>
+              Trụ sở chính: <b>300A – Nguyễn Tất Thành, Phường 13, Quận 4, TP. Hồ Chí Minh, Việt Nam</b> <br>
+              Điện thoại: <b> 1900 2039 </b>		Fax: <b>028 39 404 759</b><br>
+              Hotline: <b>0902 298 300 – 0906 298 300 – 0912 298 300 – 0914 298 300</b><br>
+              Email: <b>tttvtsinh@ntt.edu.vn – bangiamhieu@ntt.edu.vn </b>
 
-    
-         
+            </p>
 
- 
-      
-        
-            
-
-           
+          </div>
+          <div class="col-md-5"><p class="">©2017. Bản quyền thuộc về trường <b>Đại học Nguyễn Tất Thành</b></p> </div>
+        </div>
+      </div>
+     </div>
+  </footer>
+</div>           
 </body>
 </html>
