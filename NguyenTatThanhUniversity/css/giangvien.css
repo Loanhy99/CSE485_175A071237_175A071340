@@ -81,6 +81,7 @@
     padding: 0 5px;
     margin-bottom: 20px;
     margin-top: 10px;
+    height: 2950px;
 }
 .col-left {
     width: 740px;
@@ -138,8 +139,21 @@ ul {
   padding: 5px 0px 5px 15px;
   background: url(http://tcns.ntt.edu.vn/images/arrow-1.png) left 5px no-repeat;
 }
-.footer {
-  background: #2C83A0;
+
+/*footer*/
+#footer {
+  background-color: #0070c0 !important;
   border-top: 2px solid #555;
   padding: 30px 10px 20px 10px;
+}
+
+#footer .copyright {
+  text-align: center;
+  color: #fff;
+  line-height: 18px;
+  font-size: 13px;
+}
+.copyright a {
+  color: #fff;
+  font-weight: bold;
 }
