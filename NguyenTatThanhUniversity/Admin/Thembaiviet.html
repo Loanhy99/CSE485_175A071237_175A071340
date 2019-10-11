@@ -7,7 +7,7 @@
     <title>Quản Trị Hệ Thống</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     
-    <link rel="stylesheet" href="css/quantri.css">
+    <link rel="stylesheet" href="css/baiviet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -37,7 +37,7 @@
                             
                                    <ul>
                                       <li class="nav-item1">
-                                          <a href="#">
+                                          <a href="Quantrihethong.html">
                                             <i class="fa fa-home"> Trang chủ </i>
                                           </a>
                                        
@@ -54,7 +54,7 @@
                                     </div>
                                      </li><hr>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="QuanTriHinhAnh.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fa fa-image"> Quản trị giao diện</i> 
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -76,21 +76,38 @@
                                             
   
                     </div>
-                    <div class="nd">
+                   <div class="content">
                             <div id="page-wrapper">
 
-                                    <div class="container-fluid">
-                                        
-                                         
-                                        <div class="row">
-                                            <h1 style="color: #11ee5b;">Welcome to Admin</h1>
-                                        </div>
-                                        <!-- /content -->
-                                        <!-- /.row -->
-                        
-                                        
+                                <form method="post" action="">
+                                    <h3 id="result"></h3>
+                                    <h2 style="color: rgb(56, 221, 84)">Thêm mới bài viết</h2>
+                                    <div class="form-group">
+                                        <label>ID bài viết</label>
+                                        <input type="text" id="name"  placeholder="ID" class="form-control" value="">
                                     </div>
-                                    <!-- /.container-fluid -->
+                                    <div class="form-group">
+                                        <label>Tên bài viết</label>
+                                        <input type="text" id="name"  placeholder="Tên bài viết" class="form-control" value="">
+                                    </div>
+                                    
+                                    
+                                    <div class="form-group">
+                                        <label>Nội dung</label>
+                                        <textarea id="content" class="form-control" style="height: 150px;"></textarea>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label>Ngày đăng</label>
+                                        <input type="text" id="name"  placeholder="" class="form-control" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Ảnh</label><br>
+                                        <input type="file" name="img">
+                                    </div>  
+                                    <input type="button" class="btn" onclick="add_baiviet()" value="Thêm mới" data-toggle="modal" data-target="#exampleModal">
+                                </form>
+        
                         
                                 </div>
                         

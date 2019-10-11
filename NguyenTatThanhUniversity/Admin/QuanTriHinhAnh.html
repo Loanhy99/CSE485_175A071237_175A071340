@@ -7,7 +7,7 @@
     <title>Quản Trị Hệ Thống</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     
-    <link rel="stylesheet" href="css/baiviet.css">
+    <link rel="stylesheet" href="css/QLhinhanh.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -37,7 +37,7 @@
                             
                                    <ul>
                                       <li class="nav-item1">
-                                          <a href="#">
+                                          <a href="Quantrihethong.html">
                                             <i class="fa fa-home"> Trang chủ </i>
                                           </a>
                                        
@@ -48,9 +48,9 @@
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                       <a class="dropdown-item" href="baiviet.html">Thêm bài viết</a>
-                                      <a class="dropdown-item" href="#">Chỉnh sửa bài viết</a>
-                                      
-                                      <a class="dropdown-item" href="#">Bài viết đã đăng</a>
+                                      <a class="dropdown-item" href="ChinhSuaBaiViet.html">Chỉnh sửa bài viết</a>
+                                      <a class="dropdown-item" href="XoaBai.html">Xóa bài</a>
+                                      <a class="dropdown-item" href="BaiVietDaDang.html">Bài viết đã đăng</a>
                                     </div>
                                      </li><hr>
                                     <li class="nav-item dropdown">
@@ -58,7 +58,7 @@
                                             <i class="fa fa-image"> Quản trị giao diện</i> 
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                          <a class="dropdown-item  " href="#"> Hình ảnh</a>
+                                          <a class="dropdown-item  " href="QuanTriHinhAnh.html"> Hình ảnh</a>
                                           <a class="dropdown-item" href="#">Hỗ trợ trực tuyến</a>
                                          
                                         </div></li><hr>
@@ -76,39 +76,87 @@
                                             
   
                     </div>
-                   <div class="content">
-                            <div id="page-wrapper">
+                    <div class="content">
+                        <div id="page-wrapper">
 
-                                <form method="post" action="">
-                                    <h3 id="result"></h3>
-                                    <h2 style="color: rgb(56, 221, 84)">Thêm mới bài viết</h2>
-                                    <div class="form-group">
-                                        <label>Tên bài viết</label>
-                                        <input type="text" id="name"  placeholder="Tên bài viết" class="form-control" value="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Tên bài viết tiếng anh</label>
-                                        <input type="text" id="name_eng" placeholder="Tên bài viết tiếng anh" class="form-control" value="">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Nội dung</label>
-                                        <textarea id="content" class="form-control" style="height: 150px;"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Nội dung tiếng anh</label>
-                                        <textarea id="content_eng" class="form-control" style="height: 150px;"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Ảnh</label><br>
-                                        <input type="file" name="img">
-                                    </div>  
-                                    <input type="button" class="btn" onclick="add_baiviet()" value="Thêm mới" data-toggle="modal" data-target="#exampleModal">
-                                </form>
-        
-                        
-                                </div>
-                        
-                    </div>
+                            <div class="title-module">Quản lý hình ảnh</div>
+            <div class="filter">
+                <div class="label">ID</div>
+                <div class="value"><input type="text" name="title"></div>
+                
+                
+                <div class="search"><input type="button" value="Tìm" name="search"></div>
+            </div>
+          <div class="list-course">
+                <table class="list-course" >
+                    <tr class="row-first">
+                        <td width="10"><input type="checkbox"></td>
+                        <td class="name" width="30">Sửa</td>
+                        <td class="name" width="100"><a id="xoa" href="#">Xóa</a></td>
+                        <td class="name" width="100">ID</td>
+                        <td class="name" width="450">Tiêu đề</td>
+                        <td class="name" width="150">Ngày</td>
+
+                    
+                                                                        
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><a href="#"><img src="image/edit.gif" >
+                        <td><a href="#"><img src="image/deleted.jpg" ></a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                                                                    
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><a href="#"><img src="image/edit.gif" >
+                        <td><a href="#"><img src="image/deleted.jpg"></a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                                                                    
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><a href="#"><img src="image/edit.gif" >
+                        <td><a href="#"><img src="image/deleted.jpg"></a></td>
+          
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                                                                    
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><a href="#"><img src="image/edit.gif" >
+                        <td><a href="#"><img src="image/deleted.jpg"></a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                                                                    
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><a href="#"><img src="image/edit.gif" >
+                        <td><a href="#"><img src="image/deleted.jpg" ></a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                                                                    
+                    </tr>
+                </table>
+                <div class="task"><a href="ThemAnh.html"><input type="button" value="Thêm mới" name="Thêm mới"></a>
+                    <input type="button" name="Xóa" value="Xóa"> 
+                    <a href="CapNhatAnh.html"><input type="button" name="Cập nhật" value="Cập nhật"></a>
+    </div>
+            </div>
+    
+                    
+                            </div>
+                    
+                </div>
                     
                      
                  
