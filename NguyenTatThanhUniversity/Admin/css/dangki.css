@@ -1,6 +1,6 @@
 
 body {
-  
+    background: no-repeat center top;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -11,7 +11,7 @@ body {
     text-align: center;
 	font-family: 'Open Sans', sans-serif;
 }
- input[type="email"],  input[type="password"] {
+ input[type="username"],  input[type="password"] , input[type="email"],  input[type="fullname"] {
     outline: none;
     font-size: .9em;
     padding: 1em 3em 1em 1em;
@@ -28,7 +28,8 @@ body {
 form {margin-top: 7%;}
 h1{
 	color: rgb(27, 240, 109);
-	font-family: sans-serif;
+    font-family: sans-serif;
+    margin-top: 5%;
 	
 }
 h2{
@@ -64,9 +65,4 @@ input[type="submit"]:hover {
     color: black;
 	transition:0.5s all;
 	
-}
-.register{
-	margin-top: 20px;
-	color: rgb(57, 250, 131);
-	text-align: center
 }
