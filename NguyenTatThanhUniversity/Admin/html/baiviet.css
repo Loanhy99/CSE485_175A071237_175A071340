@@ -1,3 +1,7 @@
+.content {
+    margin-left: 25%;
+    margin-top: -288px;
+}
  
 #header{
     background-color: rgb(36, 35, 35);
@@ -53,7 +57,7 @@ ul li{
     padding: .5rem 1rem;
 }
 .nav-item1 i{
-    color: red;
+    color: white;
     font-size: 18px;
     margin-left: 15px;
 }

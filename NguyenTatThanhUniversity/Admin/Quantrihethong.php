@@ -1,6 +1,8 @@
 <?php session_start(); 
-if(!isset($_SESSION['email'])){
-  header("location:login.php");
+if (!isset($_SESSION['email']))
+{
+ header("Location: login.php");
+exit();
 }
 $conn = mysqli_connect('localhost','root','','dhntt');
 if(!$conn){

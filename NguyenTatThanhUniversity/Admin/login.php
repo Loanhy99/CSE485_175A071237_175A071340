@@ -1,13 +1,7 @@
 
 <?php
 session_start();
-if(!isset($_SESSION['email'])){
-	header("location:Quantrihethong.php");
-  }
-  $conn = mysqli_connect('localhost','root','','dhntt');
-if(!$conn){
-	die('Khong the ket noi DB');
-	};
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +40,10 @@ if(!$conn){
 		
 	</form>
 <?php
-
+$conn = mysqli_connect('localhost','root','','dhntt');
+if(!$conn){
+	die('Khong the ket noi DB');
+	};
 if (isset($_POST['email'])){
 	$email = mysqli_real_escape_string($conn,$_POST['email']);
 	
@@ -60,7 +57,7 @@ if(isset($_POST['login'])){
 		$result=mysqli_query($conn,$sql);
 		$row = mysqli_fetch_assoc($result);
 		if(password_verify($password, $row['password'])){
-			$_SESSION['user']=$email;
+			$_SESSION['email']=$row['email'];
 			header('location:Quantrihethong.php');// kiem tra dung thi cho vao trnag admin
 		}
 		else{
@@ -70,10 +67,7 @@ if(isset($_POST['login'])){
 
 
 }
-
-
-
-
 ?>
+
 </body>
 </html>

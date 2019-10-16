@@ -1,3 +1,14 @@
+<?php session_start(); 
+if (!isset($_SESSION['email']))
+{
+ header("Location: login.php");
+exit();
+}
+$conn = mysqli_connect('localhost','root','','dhntt');
+if(!$conn){
+	die('Khong the ket noi DB');
+	};
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,10 +43,6 @@
         
         <?php
  
- $conn = mysqli_connect('localhost','root','','dhntt');
-  if(!$conn){
- die('Khong the ket noi DB');
-  };
   if(isset($_POST['submit'])){
     //mysqli_real_escape_string : chống các lệnh như select * from user,...
     $name = mysqli_real_escape_string($conn,$_POST['username']);
