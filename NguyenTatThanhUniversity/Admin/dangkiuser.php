@@ -1,9 +1,5 @@
 <?php session_start(); 
-if (!isset($_SESSION['email']))
-{
- header("Location: login.php");
-exit();
-}
+
 $conn = mysqli_connect('localhost','root','','dhntt');
 if(!$conn){
 	die('Khong the ket noi DB');
@@ -36,6 +32,9 @@ if(!$conn){
         <div class="pom-agile">
         <input placeholder="Full-name" name="fullname"  type="fullname" required="">  
         </div><br>
+        <div class="pom-agile">
+        <input placeholder="Chức vụ" name="role"  type="role" required="">  
+        </div><br>
         <div class="right-w3l">
 					<input type="submit" name="submit"  value=" registration">
 				</div>
@@ -49,9 +48,10 @@ if(!$conn){
     $password = mysqli_real_escape_string($conn,$_POST['password']);
     $fullname = mysqli_real_escape_string($conn,$_POST['fullname']);
     $email = mysqli_real_escape_string($conn,$_POST['email']);
+    $email = mysqli_real_escape_string($conn,$_POST['role']);
     $password = password_hash($password,PASSWORD_BCRYPT);
     
-    $sql ="INSERT into user (username,password,fullname,email) values('$name','$password','$fullname','$email')";
+    $sql ="INSERT into user (username,password,fullname,email,role) values('$name','$password','$fullname','$email','$role')";
       $result =mysqli_query($conn,$sql);
       echo" <p style='color:white'>Registration successful</p><a href='login.php'>Login</a>";
     }

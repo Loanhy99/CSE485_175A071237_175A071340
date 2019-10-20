@@ -3,6 +3,18 @@
 session_start();
 
 ?>
+<?php
+ function location($url)
+                        { ?>
+                            <script type="text/javascript">
+                            window.location = "<?=$url?>";
+                            </script>
+<?php }?>
+<?php
+    if (isset($_SESSION['lv']) && $_SESSION['lv'] == 1)
+     header(" location:index.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +70,8 @@ if(isset($_POST['login'])){
 		$row = mysqli_fetch_assoc($result);
 		if(password_verify($password, $row['password'])){
 			$_SESSION['email']=$row['email'];
-			header('location:Quantrihethong.php');// kiem tra dung thi cho vao trnag admin
+			$_SESSION['lv']=$row['user_lv'];
+			header('location:index.php');// kiem tra dung thi cho vao trnag admin
 		}
 		else{
 			echo 'mat khau sai';

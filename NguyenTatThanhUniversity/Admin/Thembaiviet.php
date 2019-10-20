@@ -1,24 +1,13 @@
-<?php session_start(); 
-if (!isset($_SESSION['email']))
-{
- header("Location: login.php");
-exit();
-}
-$conn = mysqli_connect('localhost','root','','dhntt');
-if(!$conn){
-	die('Khong the ket noi DB');
-	};
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Quản Trị Hệ Thống</title>
+    <title>Thêm bài viết</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     
-    <link rel="stylesheet" href="css/quantri.css">
+    <link rel="stylesheet" href="css/baiviet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -38,7 +27,7 @@ if(!$conn){
                      <a class="dropdown-item" href="">Profile</a><hr>
                      <a class="dropdown-item" href="">Help</a> 
                      <a class="dropdown-item" href="">Setting</a>
-                     <a class="dropdown-item" href="login.php">Log out</a>
+                     <a class="dropdown-item" href="logout.php">Log out</a>
                   </div>
                 </li>
             </ul>
@@ -48,7 +37,7 @@ if(!$conn){
                             
                                    <ul>
                                       <li class="nav-item1">
-                                          <a href="#">
+                                          <a href="index.php">
                                             <i class="fa fa-home"> Trang chủ </i>
                                           </a>
                                        
@@ -58,18 +47,18 @@ if(!$conn){
                                         <i class="fa fa-list"> Quản trị danh mục</i> 
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                      <a class="dropdown-item" href="baiviet.html">Thêm bài viết</a>
-                                      <a class="dropdown-item" href="#">Chỉnh sửa bài viết</a>
-                                      
-                                      <a class="dropdown-item" href="#">Bài viết đã đăng</a>
+                                      <a class="dropdown-item" href="thembaiviet.php">Thêm bài viết</a>
+                                      <a class="dropdown-item" href="ChinhSuaBaiViet.php">Chỉnh sửa bài viết</a>
+                                      <a class="dropdown-item" href="XoaBai.php">Xóa bài viết</a>
+                                      <a class="dropdown-item" href="BaiVietDaDang.php">Bài viết đã đăng</a>
                                     </div>
                                      </li><hr>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="QuanTriHinhAnh.php" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fa fa-image"> Quản trị giao diện</i> 
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                          <a class="dropdown-item  " href="#"> Hình ảnh</a>
+                                          <a class="dropdown-item  " href="QuanTriHinhAnh.html"> Hình ảnh</a>
                                           <a class="dropdown-item" href="#">Hỗ trợ trực tuyến</a>
                                          
                                         </div></li><hr>
@@ -87,21 +76,38 @@ if(!$conn){
                                             
   
                     </div>
-                    <div class="nd">
+                   <div class="content">
                             <div id="page-wrapper">
 
-                                    <div class="container-fluid">
-                                        
-                                         
-                                        <div class="row">
-                                            <h1 style="color: #11ee5b;">Welcome to Admin</h1>
-                                        </div>
-                                        <!-- /content -->
-                                        <!-- /.row -->
-                        
-                                        
+                                <form method="post" action="">
+                                    <h3 id="result"></h3>
+                                    <h2 style="color: rgb(56, 221, 84)">Thêm mới bài viết</h2>
+                                    <div class="form-group">
+                                        <label>ID bài viết</label>
+                                        <input type="text" id="name"  placeholder="ID" class="form-control" value="">
                                     </div>
-                                    <!-- /.container-fluid -->
+                                    <div class="form-group">
+                                        <label>Tên bài viết</label>
+                                        <input type="text" id="name"  placeholder="Tên bài viết" class="form-control" value="">
+                                    </div>
+                                    
+                                    
+                                    <div class="form-group">
+                                        <label>Nội dung</label>
+                                        <textarea id="content" class="form-control" style="height: 150px;"></textarea>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label>Ngày đăng</label>
+                                        <input type="text" id="name"  placeholder="" class="form-control" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Ảnh</label><br>
+                                        <input type="file" name="img">
+                                    </div>  
+                                    <input type="button" class="btn" onclick="add_baiviet()" value="Thêm mới" data-toggle="modal" data-target="#exampleModal">
+                                </form>
+        
                         
                                 </div>
                         
