@@ -1,35 +1,17 @@
-<?php session_start(); 
-function location($url)
-{ ?>
-    <script type="text/javascript">
-    window.location = "<?=$url?>";
-    </script>
-<?php }?>
-<?php 
-if (!isset($_SESSION['email']) && (!isset($_SESSION['lv'])) && $_SESSION['lv'] !=1)
-{
- header("Location: login.php");
-exit();
-}
-$conn = mysqli_connect('localhost','root','','dhntt');
-if(!$conn){
-	die('Khong the ket noi DB');
-	};
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Quản lý User</title>
+    <title>Quản Trị Hệ Thống</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     
-    <link rel="stylesheet" href="css/quanlyuser.css">
+    <link rel="stylesheet" href="css/baiviet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-        <div id="header">
+<div id="header">
           <div class="title col-md-6"> 
            <a href=""><img src="image/logo.jpg" alt="" style="width:60px; height:60px"></a>
             <a class="navbar-brand" href="#">QUẢN TRỊ </a></div>
@@ -92,65 +74,34 @@ if(!$conn){
                </ul>
                                    
              </div>
-             <div class="content-right">
-              <h3>Quản lý User</h3>
-               <table class="table">
-                 <thead class="text-primary ">
-                 <tr>
-                   <th>ID</th>
-                   <th>Name</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th>Option</th>
-                 </tr>
-                </thead>
-               
-                <?php
-                       $sql = "select * from user";
-                      mysqli_set_charset($conn, "UTF8");
-                       $result = mysqli_query($conn, $sql);
-                        $i = 1;
-                         while ($row = mysqli_fetch_assoc($result)) {
-                  ?>
-                   <tr>
-                       <td><?php echo $i ?></td>
-                         <td><?php echo $row["username"] ?></td>
-                                                        
-                        <td class="text-primary"><?php echo $row["email"] ?></td>
+                   <div class="content-right">
+                            <div id="page-wrapper">
+
+                                <form method="post" action="">
+                                    <h3 id="result"></h3>
+                                    <h2 style="color: rgb(56, 221, 84)">Edit bài viết</h2>
+                                    <div class="form-group">
+                                        <label>Tên bài viết</label>
+                                        <input type="text" id="name"  placeholder="Tên bài viết" class="form-control" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Nội dung</label>
+                                        <textarea id="content" class="form-control" style="height: 150px;"></textarea>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label>Ảnh</label><br>
+                                        <input type="file" name="img">
+                                    </div>  
+                                    <input type="button" class="btn" onclick="add_baiviet()" value="Thêm mới" data-toggle="modal" data-target="#exampleModal">
+                                </form>
+        
                         
-                          <td>
-                           <?php if ($row["user_lv"] == 1) echo '<a class="btn btn-success" href="#" role="button">ADMIN</a>';
-                                else if  ($row["user_lv"] == 2)
-                           
-                                    echo '<a class="btn btn-success" href="#" role="button">Giảng viên</a>';
-                         ?>
-                        </td>
-                         <td>
-                            <div class="">
-                          <a href="edit.php?id=<?php echo $row["id"] ?>" class="btn btn-warning modal-trigger">
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                                 Edit
-                         </a>
-                         <a href="delete.php?id=<?php echo $row["id"] ?>" class="btn btn-danger" id="btn-submit-del" type="button" onclick="myFunction()">
-                           <i class="fa fa-trash" aria-hidden="true"></i>
-                               Delete
-                          </a>
-                                                                
-                       </div>
-                           </td>
-                            </tr>
-                       <?php $i++;
-                        }
-                    ?>
+                                </div>
                         
-               </table>
-             </div>
-         
-         
-         
-           </div>   
-      
-                
+                    </div>
+                    
+                     
                  
             
                 

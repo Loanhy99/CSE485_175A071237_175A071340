@@ -1,5 +1,15 @@
-<?php session_start(); 
+<?php
+session_start();
 
+?>
+<?php
+ function location($url)
+                        { ?>
+                            <script type="text/javascript">
+                            window.location = "<?=$url?>";
+                            </script>
+<?php }?>
+<?php
 $conn = mysqli_connect('localhost','root','','dhntt');
 if(!$conn){
 	die('Khong the ket noi DB');
@@ -11,7 +21,7 @@ if(!$conn){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>dang ki</title>
+    <title>Đăng ký</title>
      <link rel="stylesheet" href="css/dangki.css">
 </head>
 <body style="background-image: url(image/1.jpg);">
@@ -32,9 +42,8 @@ if(!$conn){
         <div class="pom-agile">
         <input placeholder="Full-name" name="fullname"  type="fullname" required="">  
         </div><br>
-        <div class="pom-agile">
-        <input placeholder="Chức vụ" name="role"  type="role" required="">  
-        </div><br>
+        
+      
         <div class="right-w3l">
 					<input type="submit" name="submit"  value=" registration">
 				</div>
@@ -43,16 +52,17 @@ if(!$conn){
         <?php
  
   if(isset($_POST['submit'])){
-    //mysqli_real_escape_string : chống các lệnh như select * from user,...
+    
     $name = mysqli_real_escape_string($conn,$_POST['username']);
     $password = mysqli_real_escape_string($conn,$_POST['password']);
     $fullname = mysqli_real_escape_string($conn,$_POST['fullname']);
     $email = mysqli_real_escape_string($conn,$_POST['email']);
-    $email = mysqli_real_escape_string($conn,$_POST['role']);
+   // $role = mysqli_real_escape_string($conn,$_POST['name_role']);
     $password = password_hash($password,PASSWORD_BCRYPT);
+ 
+    $sql ="INSERT INTO user  (username,password,fullname,email ) values('$name','$password','$fullname','$email')";
+      mysqli_query($conn,$sql) or die(mysqli_error($conn));
     
-    $sql ="INSERT into user (username,password,fullname,email,role) values('$name','$password','$fullname','$email','$role')";
-      $result =mysqli_query($conn,$sql);
       echo" <p style='color:white'>Registration successful</p><a href='login.php'>Login</a>";
     }
  

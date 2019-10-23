@@ -1,31 +1,13 @@
-<?php session_start(); 
-function location($url)
-{ ?>
-    <script type="text/javascript">
-    window.location = "<?=$url?>";
-    </script>
-<?php }?>
-<?php 
-if (!isset($_SESSION['email']) && (!isset($_SESSION['lv'])) && $_SESSION['lv'] !=1)
-{
- header("Location: login.php");
-exit();
-}
-$conn = mysqli_connect('localhost','root','','dhntt');
-if(!$conn){
-	die('Khong the ket noi DB');
-	};
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Users</title>
+    <title>Quản Trị Hệ Thống</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     
-    <link rel="stylesheet" href="css/edituser.css">
+    <link rel="stylesheet" href="css/baiviet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -67,7 +49,7 @@ if(!$conn){
                            <i class="fa fa-list"> Quản trị danh mục</i> 
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                             <a class="dropdown-item" href="thembaiviet.php">Thêm bài viết</a>
+                             <a class="dropdown-item" href="Thembaiviet.php">Thêm bài viết</a>
                              <a class="dropdown-item" href="Chinhbaiviet.php">Chỉnh sửa bài viết</a>   
                              <a class="dropdown-item" href="baivietdang.php">Bài viết đã đăng</a>
                         </div>
@@ -92,58 +74,19 @@ if(!$conn){
                </ul>
                                    
              </div>
-          <div class="content-right">
-              <h3>Edit Users</h3>
-              <?php
-                  $id = $_GET["id"];
-                  $sql = "SELECT * FROM user WHERE id = '$id'";
-                  mysqli_set_charset($conn, "UTF8");
-                  $result = mysqli_query($conn, $sql);
-                  $row = mysqli_fetch_assoc($result);
-                  ?>
-              <div class="form-group">
-             
-                 <input type="text" id="username"  class="form-control" value="<?php echo $row['username'] ?>">
-
-              </div>
-              <div class="form-group">
-             
-                 <input type="text" id="email"  class="form-control" value="<?php echo $row['email'] ?>">
- 
-              </div>
-              <div class="form-group">
-             
-                 <input type="text" id="fullname"  class="form-control" value="<?php echo $row['fullname'] ?>">
-
-             </div>
-              <div class="form-group">
-              <select name="level" class="form-control">
-                            <option selected value="1">Admin</option>
-                            <option value="2">Giảng viên</option>
-                          </select>
-                        
-              </div>
-              <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right" >Update Profile</button>
-                    <div class="clearfix"></div>
-                  </form>
-                  <?php
-                  $id = $_GET["id"];
-                  if (isset($_POST["submit"])) {
-                    $email = $_POST["email"];
-                    $user_name = $_POST["username"];                    
-                    $level = $_POST["uesr_lv"];                  
-                    $fullname = $_POST["fullname"];    
-                    $query = "UPDATE user
-                      SET email = '$email', username = '$user_name', user_lv= '$level',fullname='$fullname'
-                      WHERE id = '$id'";
-                    mysqli_query($conn, $query);
-                    echo "Bạn đã cập nhật thành công";
-                    //header("Location: user.php");
-                  }
-                  ?>
-          </div>
-        </div>
-
-    </div>
+                   <div class="content-right">
+                            
+                    </div>
+                    
+                     
+                 
+            
+                
+       
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    
 </body>
 </html>

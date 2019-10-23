@@ -11,7 +11,7 @@ body {
     text-align: center;
 	font-family: 'Open Sans', sans-serif;
 }
- input[type="username"],  input[type="password"] , input[type="email"],  input[type="fullname"] ,input[type="role"] {
+ input[type="username"],  input[type="password"] , input[type="email"],  input[type="fullname"] ,input[type="user_lv"] {
     outline: none;
     font-size: .9em;
     padding: 1em 3em 1em 1em;

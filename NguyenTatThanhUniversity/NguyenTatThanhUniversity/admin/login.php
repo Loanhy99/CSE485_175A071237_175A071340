@@ -71,6 +71,7 @@ if(isset($_POST['login'])){
 		if(password_verify($password, $row['password'])){
 			$_SESSION['email']=$row['email'];
 			$_SESSION['lv']=$row['user_lv'];
+		
 			header('location:index.php');// kiem tra dung thi cho vao trnag admin
 		}
 		else{
